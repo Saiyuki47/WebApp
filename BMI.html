@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BMI-Rechner</h1>
+<form action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php"	method="get">
+    <fieldset>
+        <legend>Angaben zur BMI-Rechner</legend>
+        
+        Gewicht:
+        <input type="text" name="gewicht" size="4" value=""><br>
+        Größe:
+        <input type="text" name="groesse" size="4" value=""> 
+        <br> 
+        <br>
+
+        Benutzername:
+        <input type="text" name="username" size="4" value=""><br>
+        E-Mail:
+        <input type="text" name="mail" size="4" value=""> 
+
+        <br>
+        <br>
+        <br>
+
+
+        <fieldset>
+            <legend>Geschlecht</legend>
+            <input type="radio" name="gender" value=""> Männlich
+            <input type="radio" name="gender" value=""> Weiblich
+        
+        </fieldset>
+        <br>
+
+        <input type="submit" value="Absenden">
+        <input type="reset" value="Zurücksetzen">
+
+
+    </fieldset>
+</form>
+<p>Ihr Body Mass Index beträgt _____.</p>
+</body>
+</html>
+
