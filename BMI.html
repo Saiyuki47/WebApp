@@ -4,25 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- <link rel="stylesheet" href="Übung1.css"> -->
+    <title>Amogus</title>
+    <style>
+        .button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+    }
+.best-Font {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+    </style>
+
+
 </head>
 <body>
-    <h1>BMI-Rechner</h1>
+    <h1 class="best-Font" >BMI-Rechner</h1>
 <form action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php"	method="get">
-    <fieldset>
-        <legend>Angaben zur BMI-Rechner</legend>
+    <fieldset style="margin: 10px;">
+        <legend style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;">Angaben zur BMI-Rechner</legend>
         
-        Gewicht:
-        <input type="text" name="gewicht" size="4" value=""><br>
-        Größe:
-        <input type="text" name="groesse" size="4" value=""> 
-        <br> 
-        <br>
+        <div>
+            <p>
+                <label for="gewichtID">Gewicht:</label> 
+                <input type="number" name="gewicht" id="gewichtID" placeholder="z.B. 80"
+                 size="4" min=0 value="" required>
+            </p>
+    
+            <p >
+                <label for="groesseID">Größe:</label> 
 
-        Benutzername:
-        <input type="text" name="username" size="4" value=""><br>
-        E-Mail:
-        <input type="text" name="mail" size="4" value=""> 
+                <input type="number"  id="groesseID"  step=.01 
+                placeholder="z.B. 180 oder 1,80" name="groesse" min= 0 size="4" 
+                value="" required> 
+            </p>
+        </div>
+        
+        
+        <label for="username">Benutzername:</label> 
+        <input type="text" id="username" name="username" size="4" value="" >
+        <label for="email">E-Mail:</label> 
+        <input type="email" id="email" name="mail" size="4" value="" > 
 
         <br>
         <br>
@@ -31,19 +63,21 @@
 
         <fieldset>
             <legend>Geschlecht</legend>
-            <input type="radio" name="gender" value=""> Männlich
-            <input type="radio" name="gender" value=""> Weiblich
+        
+            <input type="radio" id="radioMen"name="gender" value="" required>
+            <label for="radioMen">Männlich</label>
+            <input type="radio" id="radioWomen" name="gender" value=""> 
+            <label for="radioWomen">Weiblich</label>
         
         </fieldset>
         <br>
 
-        <input type="submit" value="Absenden">
-        <input type="reset" value="Zurücksetzen">
+        <input class="button1" type="submit" value="Absenden">
+        <input class="button1" type="reset" value="Zurücksetzen">
 
 
     </fieldset>
 </form>
-<p>Ihr Body Mass Index beträgt _____.</p>
+<!-- <p>Ihr Body Mass Index beträgt _____.</p> -->
 </body>
 </html>
-
