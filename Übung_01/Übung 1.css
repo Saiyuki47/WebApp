@@ -1,0 +1,12 @@
+.field-top {
+    width: 325px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.field-bottom {
+    width: 325px;
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+}
