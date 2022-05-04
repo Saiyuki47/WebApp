@@ -4,58 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Übung1.css">
-    <title>Amogus</title>
+    <link rel="stylesheet" href="Übung 1.css">
+    <title>Tits</title>
 
 
 </head>
 <body>
-    <h1 class="best-Font" >BMI-Rechner</h1>
-<form action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php"	method="get">
+    
+<h1 class="best-Font" >BMI-Rechner</h1>
+<form id="fomy" action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php"	method="get">
     <fieldset style="margin: 10px;">
         <legend style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;">Angaben zur BMI-Rechner</legend>
         
-        <div>
-            <p>
-                <label for="gewichtID">Gewicht:</label> 
+        <div class="divshit">
+            <div class="divshit">
+                <label class="textshit" for="gewichtID">Gewicht:</label> 
+            
                 <input type="number" name="gewicht" id="gewichtID" placeholder="z.B. 80"
                  size="4" min=0 value="" required>
-            </p>
+            </div>
     
-            <p >
-                <label for="groesseID">Größe:</label> 
+            <div class="divshit">
+                <label class="textshit" for="groesseID">Größe:</label> 
                 
                 <input type="number"  id="groesseID"  step=.01 
                 placeholder="z.B. 180 oder 1,80" name="groesse" min= 0 size="4" 
                 value="" required> 
-            </p>
+            </div>
         </div>
         
         
-        <label for="username">Benutzername:</label> 
-        <input type="text" id="username" name="username" size="4" value="" >
-        <label for="email">E-Mail:</label> 
-        <input type="email" id="email" name="mail" size="4" value="" > 
-
-        <br>
-        <br>
-        <br>
-
-
-        <fieldset>
-            <legend>Geschlecht</legend>
         
-            <input type="radio" id="radioMen"name="gender" value="" required>
-            <label for="radioMen">Männlich</label>
-            <input type="radio" id="radioWomen" name="gender" value=""> 
-            <label for="radioWomen">Weiblich</label>
+
+        <fieldset class="divshit">
+            <legend>Geschlecht</legend>
+            <div>
+                <input type="radio" id="radioMen"name="gender" value="" required>
+                <label for="radioMen">Männlich</label>
+                <input type="radio" id="radioWomen" name="gender" value=""> 
+                <label for="radioWomen">Weiblich</label>
+                <input type="radio" id="radioWomen" name="gender" value=""> 
+                <label for="radioWomen">Divers</label>
+            </div>
+            
         
         </fieldset>
-        <br>
 
-        <input class="button1" type="submit" value="Absenden">
-        <input class="button1" type="reset" value="Zurücksetzen">
-
+        <div id="userData" class="divshit">
+            <div class="divshit">
+                <label class="textshit" for="username">Name:</label> 
+                <input type="text" id="username" name="username" size="4" value="" >
+            </div>
+            <div class="divshit">
+                <label class="textshit" for="email">E-Mail:</label> 
+                <input type="email" id="email" name="mail" size="4" value="" > 
+            </div>
+            
+            
+        </div>
+        
+        
+        <div class="divshit">
+            <button class="glow-on-hover" type="submit">Absenden</button>
+            <button class="glow-on-hover" type="reset">Zurücksetzen</button>
+        </div>
+        <!-- <input class="glow-on-hover" type="submit" value="Absenden">
+        <input class="glow-on-hover" type="reset" value="Zurücksetzen"> -->
+        
 
     </fieldset>
 </form>
