@@ -58,20 +58,13 @@
 }
 
 .divshit{
-    
     margin: 10px;
-    row-gap: 5px;
-    column-gap: 5px;
-    
 }
 
 #fomy{
+    position: center;
     display: inline-grid;
 
-}
-
-.inputTextShit{
-    
 }
 
 .textshit{
@@ -80,3 +73,55 @@
     text-align: left;
     margin-right: 10px;
 }
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: -4px 4px #ef3550,
+                 -8px 8px #f48fb1,
+                 -12px 12px #7e57c2,
+                 -16px 16px #2196f3,
+                 -20px 20px #26c6da,
+                 -24px 24px #43a047,
+                 -28px 28px #eeff41,
+                 -32px 32px #f9a825,
+                 -36px 36px #ff5722;
+  }
+
+  .rainbow-text {
+    animation-duration: 3.115s;
+   }
+   
+   .rainbow-text {
+    background: linear-gradient(53.13deg,#FFD33D 0,#FB8532 16.02%,#EA4A5A 28.06%,#8A63D2 56.92%,#2188FF 72.93%,#34D058 84%,#FFD33D 100%);
+    background-size: auto;
+    background-clip: border-box;
+    background-clip: text;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    display: inline-block;
+    color: transparent;
+    /* text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+    animation: shine 6.28s alternate infinite;
+    animation-duration: 6.28s;
+    background-size: 300%;
+   }
+   
+   @keyframes shine {
+    0% {
+     background-position:200% center
+    }
+    62.8% {
+     background-position:100% center
+    }
+    100% {
+     background-position:200% center
+    }
+   }
