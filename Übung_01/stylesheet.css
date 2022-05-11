@@ -59,12 +59,22 @@
 
 .divshit{
     margin: 10px;
+    
 }
 
-#fomy{
-    position: center;
-    display: inline-grid;
+.buttons{
+    text-align: right;
+}
 
+.container{
+    width: 100%;
+}
+#fomy{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    
+    
 }
 
 .textshit{
@@ -73,6 +83,10 @@
     text-align: left;
     margin-right: 10px;
 }
+.inputBox{
+    width: 150px;
+}
+
 
 h1 {
     margin-top: 0px;
