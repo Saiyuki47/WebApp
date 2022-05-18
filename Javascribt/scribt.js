@@ -135,8 +135,82 @@ function getDayWithArray()
     const weekday = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
     alert(weekday[new Date().getDay()]);
 }
+function createArrayWithRandomNum(a,b,n)
+{
+    if(n==0)
+    {
+        document.write("KEIN ARRAY KEIN SERVICE");
+        return;
+    }
+        min = Math.ceil(a);
+    max = Math.floor(b);
+    //document.write( Math.floor(Math.random() * (b - a) + a));
+    let arr = [];
+    for(let i = 0;i<n;i++)
+    {
+        arr[i] = Math.floor(Math.random() * (b - a) + a);
+        //document.write((Math.random() * (b - a) + a) + "\n");
+    }
+    document.write(arr.toString());
 
+    summeVonArray(arr);
+    groessteZahl(arr);
+    
+}
+function summeVonArray(arr)
+{
+    let sum = 0;
+    for(let i = 0; i<arr.length;i++)
+    {
+        sum+= arr[i];
+    }
 
+    document.write("\n Summe = "+sum);
+}
+
+function groessteZahl(arr)
+{
+    let biggestNum;
+    
+    for(let i = 0; i<arr.length;i++)
+    {
+        if(i==0||arr[i]>biggestNum)
+        {
+            biggestNum=arr[i];
+        }
+    }
+    document.write("\n BiggestNumber = "+biggestNum);
+}
+function mutliArray()
+{
+    let activities = [
+        ['Work', 9],
+        ['Eat', 1],
+        ['Commute', 2],
+        ['Play Game', 1],
+        ['Sleep', 7]
+    ];
+    mutliArrayAusgeben(activities);
+    //document.write(activities.toString());
+    //console.table(activities);
+    
+    // mit Push kann man Arrays hinzufügen
+    // activities.push(['Study',2]);
+
+    //An der Gewünschten Stelle im Array zurückgeben
+    // activities.splice(1, 0, ['Programming', 2]);
+}
+function mutliArrayAusgeben(arr)
+{
+    //document.write("Array Length = "+ arr.length+ " Array[1] length = "+ arr[1].length)
+    for(let i = 0; i<arr.length;i++)
+    {
+        for(let j = 0; j<arr[i].length;j++)
+        {
+            document.write(arr[i][j]);
+        }
+    }
+}
 
 
 
