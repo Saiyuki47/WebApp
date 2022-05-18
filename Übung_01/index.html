@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="scribt.js"></script>
     <title>BMI-Rechner</title>
 
 
@@ -56,11 +57,15 @@
         <div id="userData" class="divshit">
             <div class="divshit">
                 <label class="textshit" for="username">Name:</label> 
-                <input class="inputBox" type="text" id="username" name="username" size="4" value="" >
+                <input class="inputBox" type="text" id="username" name="uname" size="4" value="" >
             </div>
             <div class="divshit">
                 <label class="textshit" for="email">E-Mail:</label> 
                 <input class="inputBox" type="email" id="email" name="mail" size="4" value="" > 
+            </div>
+            <div class="divshit">
+                <label class="textshit" for="anmerkung">Anmerkung</label> 
+                <textarea maxlength="80" oninput="alert('Du hast etwas geschriebn :D')" class="inputBox" id="anmerkung" name="anmerk" ></textarea> 
             </div>
             
             
