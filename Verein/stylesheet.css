@@ -1,0 +1,13 @@
+table, th, td, tr, tbody, button
+{
+    margin : 5px;
+    padding: 5px;
+    border : 1px solid;
+}
+#vereinMitglieder
+{
+    visibility: hidden;
+}
+body{
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
