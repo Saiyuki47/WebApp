@@ -8,6 +8,21 @@ let mitglieder = [
         name    : "Doe",
         vorname : "Jane",
         email   : "jane@doe.org"
+    },
+    {
+        name    : "David",
+        vorname : "Geher",
+        email   : "david@samsung.com"
+    },
+    {
+        name    : "Leon",
+        vorname : "Döner",
+        email   : "Amog@aids.com"
+    },
+    {
+        name    : "Kevin",
+        vorname : "Kevin",
+        email   : "kevin@kevin.com"
     }
 
 ]  
@@ -16,44 +31,52 @@ function loadSite()
 {
     document.getElementById("startButton").style.visibility      = "hidden";
     document.getElementById("vereinMitglieder").style.visibility = "visible";
+    document.getElementById("gruppe_list_div").style.visibility  = "visible";
+    //get table in a variable
     let table = document.getElementById("vereinMitglieder");
 
-    // for(let i= 0; i<mitglieder.length;i++)
-    // {
-        for(let j= 0; j<mitglieder.length;j++)
-        {
-            let row      = table.insertRow(j+1);
-            row.style.backround = "lime";
-            let name     = row.insertCell(0);
-            let vorname  = row.insertCell(1);
-            let email    = row.insertCell(2);    
-            let gruppe   = row.insertCell(3);
-
-            name.innerHTML          = mitglieder[j].name;
-            vorname.innerHTML       = mitglieder[j].vorname;
-            email.innerHTML         = mitglieder[j].email;
-            email.style.backround   = "grey"
-            gruppe.innerHTML        = "<button type='button' id='addButton' >Add</button>"+
-                                      "<button type='button' id='delButton' >Delete</button>"; 
-        }
-    // }
-    function addCell(row,cell,text)
+    for(let j= 0 ; j < mitglieder.length ; j++)
     {
-        //table.insertRow(row).insertCell(cell).innerHTML = text;
-        let row2     = table.insertRow(row);
-        let tmp      =row2.insertCell(cell);
-        tmp.innerHTML = text;
+        let row      = table.insertRow(j+1);
+        let name     = row.insertCell(0);
+        let vorname  = row.insertCell(1);
+        let email    = row.insertCell(2);    
+        let gruppe   = row.insertCell(3);
 
-        // let vorname =row2.insertCell(cell+1);
-        // let email   =row.insertCell(cell+2);    
-        // let gruppe  = row.insertCell(cell+3);
-        // name.innerHTML      = "Saiz"//mitglieder[i].name;
-        // vorname.innerHTML   = "David"//mitglieder[i].vorname;
-        // email.innerHTML     = "Leon@weber.com"//mitglieder[i].email;
-        // gruppe.innerHTML    = "<button type='button' >Add</button>";
-    }   
-    
+        name.innerHTML          = mitglieder[j].name;
+        vorname.innerHTML       = mitglieder[j].vorname;
+        email.innerHTML         = mitglieder[j].email;
+        if(j%2==0)
+        {
+            row.style.background   = "grey";
+        }
+        gruppe.innerHTML        = "<button type='button' onclick='addOrRemoveFromTable(true,"+j+")' >Add</button>"+
+                                  "<button type='button' onclick='addOrRemoveFromTable(false,"+j+")' >Delete</button>"; 
+    }
+}
+//if remOrAdd = false -> delete user 
+//else append user
+function addOrRemoveFromTable(remOrAdd,index) 
+{
+    let ul = document.getElementById("gruppenteilnehmer");
+    let items = ul.getElementsByTagName("li");
+    let isInList = false;
 
-
-
+    //Check if user already in List
+    if (document.getElementById(index.toString()) !== null)
+    {
+        isInList = true;
+    }
+    //if user in list and 
+    if(remOrAdd && !isInList)
+    {
+        let li = document.createElement("li");
+        li.id = index;
+        li.innerHTML = mitglieder[index].vorname + " " + mitglieder[index].name ;
+        ul.appendChild(li);
+    }
+    else if(!remOrAdd && isInList)
+    {
+        document.getElementById(index.toString()).remove();
+    }
 }
