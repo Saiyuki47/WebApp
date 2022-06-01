@@ -1,5 +1,11 @@
-function doLightBox()
+function doLightBox(id)
 {
+    alert(id);
     let tagertDiv = document.getElementById("targetImage");
-    tagertDiv.src = document.getElementById();
+    //Eine style-class machen um die Lightbox sexy zu machen
+    tagertDiv.classList.add("AmoTest");
+    tagertDiv.src = id.src;
+    
+    
+
 }
