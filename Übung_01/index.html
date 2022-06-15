@@ -16,7 +16,7 @@
 <div class="container divshit">
 
 
-<form id="fomy"  action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php"	method="get">
+<form id="fomy" onsubmit="event.preventDefault();return checkRegex()"  action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php"	method="get">
     <fieldset class="rainbow-text">
         <legend class="rainbow-text">Angaben zur BMI-Rechner</legend>
         
@@ -57,6 +57,9 @@
         <div id="userData" class="divshit">
             <div class="divshit">
                 <label class="textshit" for="username">Name:</label> 
+                <!-- ^[A-Za-zäöüÄÖÜẞ]+\s+[A-Za-zäöüÄÖÜẞ]*$ -->
+                <!-- Man kann es ohne JavsScribt nur mit pattern machen aber weil Übung -->
+                <!-- pattern="^([A-ZÖÄÜ][a-zöäüß]+(\s[A-ZÖÄÜ][a-zöäüß]+)*)$" -->
                 <input class="inputBox" type="text" id="username" name="uname" size="4" value="" >
             </div>
             <div class="divshit">
@@ -65,7 +68,11 @@
             </div>
             <div class="divshit">
                 <label class="textshit" for="anmerkung">Anmerkung</label> 
-                <textarea maxlength="80" oninput="alert('Du hast etwas geschriebn :D')" class="inputBox" id="anmerkung" name="anmerk" ></textarea> 
+
+                <!-- Man kann es ohne JavsScribt nur mit pattern machen aber weil Übung -->
+                <!-- pattern="^[a-zA-Z .,?!ßöäüÖÄÜ]*$" -->
+                <textarea maxlength="80" class="inputBox"  id="anmerkung" name="anmerk" ></textarea> 
+                <!-- oninput="alert('Du hast etwas geschriebn :D')" </textarea>  -->
             </div>
             
             

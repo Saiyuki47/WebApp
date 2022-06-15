@@ -16,6 +16,23 @@ function calcBMI()
     let bmi = fett / (height*height);
     document.getElementById("bmiValue").innerText =(fett / (height*height)).toFixed(2);
 }
+function checkRegex()
+{
+
+    let regexForName = "^([A-ZÖÄÜ][a-zöäüß]+(\s[A-ZÖÄÜ][a-zöäüß]+)*)$";
+    let regexForAnmerkung = "/<[^>]+>/";
+
+    let name = document.getElementById("username").value;
+    let anmerkung = document.getElementById("anmerkung").value;
+
+    if(name != regexForName && anmerkung ==regexForAnmerkung )
+    {
+        return false;
+    }
+    return true;
+
+
+}
 
 
 
