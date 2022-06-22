@@ -1,0 +1,28 @@
+[
+    {
+        "name":"Smith",
+        "vorname":"John",
+        "email":"foo@bar.com"
+    },
+    {
+        "name":"Doe",
+        "vorname":"Jane",
+        "email":"jane@doe.org"
+    },
+    {
+        "name":"David",
+        "vorname":"Geher",
+        "email":"david@samsung.com"
+    },
+    {
+        "name":"Leon",
+        "vorname":"Döner",
+        "email":"Amog@aids.com"
+    },
+    {
+        "name":"Kevin",
+        "vorname":"Kevin",
+        "email":"kevin@kevin.com"
+    }
+]
+ 
