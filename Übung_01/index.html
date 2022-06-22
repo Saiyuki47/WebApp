@@ -15,8 +15,8 @@
 <h1 class="best-Font" >BMI-Rechner</h1>
 <div class="container divshit">
 
-
-<form id="fomy" onsubmit="event.preventDefault();return checkRegex()"  action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php"	method="get">
+<!-- onsubmit="event.preventDefault();return checkRegex()" -->
+<form id="fomy" onsubmit="return checkRegex(event)" action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php"	method="get">
     <fieldset class="rainbow-text">
         <legend class="rainbow-text">Angaben zur BMI-Rechner</legend>
         
