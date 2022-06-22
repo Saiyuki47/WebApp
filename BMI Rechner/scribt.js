@@ -31,8 +31,28 @@ function checkRegex(evt)
         return false;
     }
     return true;
+}
 
-
+function calcBMI_AJAX()
+{
+    const xhttp = new XMLHttpRequest();
+    let height = document.getElementById("groesseID").value;
+    let fett = document.getElementById("gewichtID").value;
+    xhttp.onload = function()
+    {
+        document.getElementById("bmiValue").innerHTML =this.response;
+    };
+    xhttp.open("GET","https://vulcan.informatik.hs-fulda.de/bmiRechnerAjax.php"+"?groesse="+height+"&gewicht="+fett);
+    xhttp.send();
+}
+// Macht das selbe wie calcBMI_AJAX
+function calcBMI_Fetch()
+{
+    let height = document.getElementById("groesseID").value;
+    let fett = document.getElementById("gewichtID").value;
+    fetch("https://vulcan.informatik.hs-fulda.de/bmiRechnerAjax.php"+"?groesse="+height+"&gewicht="+fett)
+    .then(res =>res.response)
+    .then(bmi => document.getElementById("bmiValue").innerHTML =bmi)
 }
 
 
