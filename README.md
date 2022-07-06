@@ -2,7 +2,7 @@
 
 Dies ist das Repository für das Modul WebApp im Sommersemester 2022 an der Hochschule Fulda.
 
-[BMI-Rechner](./BMI Rechner/)  
+[BMI-Rechner](./"BMI Rechner"/)  
 [SeitenLayout](./SeitenLayout/)  
 [JavaScribtÜbung](./Javascribt/)  
 [Verein](./Verein/)  
