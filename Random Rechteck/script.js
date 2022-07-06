@@ -22,17 +22,18 @@ class Rechteck
 let canvas = document.getElementById("theCanvas");
 let context = canvas.getContext("2d");
 
-document.getElementById("theCanvas").addEventListener("click",randomEck(),true);
+document.getElementById("theCanvas").addEventListener("click",()=>randomEck());
 
 function randomEck()
 {
-    var neuEck = new Rechteck(Math.floor(Math.random*500),
-                            Math.floor(Math.random*500),
+
+    var neuEck = new Rechteck(
+                            50,
+                            50,
                             Math.floor(Math.random*200),
                             Math.floor(Math.random*200),
                             
-                            String(rgb(Math.floor(Math.random*256),
-                            Math.floor(Math.random*256),
-                            Math.floor(Math.random*256))));
+                            String("rgb("+Math.floor(Math.random*256)+","+Math.floor(Math.random*256)+","+Math.floor(Math.random*256)+")")
+                        );
     neuEck.draw(context);
 }
