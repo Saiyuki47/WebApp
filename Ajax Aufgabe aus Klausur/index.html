@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <h1>Kreditkartenpruefung</h1>
+        <h3>(AJAX Version)</h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <br>
+        <label for="name">Kreditkartennummer:</label>
+        <input type="number" onblur="checkKreditNummer()" id="Kreditkartennummer">
+        <div>
+            <input type="reset" value="Reset">
+            <input type="button" value="Fortsetzen" id="Fortsetzen" disabled>
+        </div>
+
+    </div>
+
+</body>
+</html>
