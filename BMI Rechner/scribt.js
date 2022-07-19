@@ -52,7 +52,7 @@ function calcBMI_Fetch()
     let fett = document.getElementById("gewichtID").value;
     fetch("https://vulcan.informatik.hs-fulda.de/bmiRechnerAjax.php"+"?groesse="+height+"&gewicht="+fett)
     .then(res =>res.response)
-    .then(bmi => document.getElementById("bmiValue").innerHTML =bmi)
+    .then(bmi => document.getElementById("bmiValue").innerHTML = bmi)
 }
 
 
